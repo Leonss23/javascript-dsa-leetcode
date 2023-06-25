@@ -17,4 +17,15 @@ function generateArray(bits) {
   return arr;
 }
 
-module.exports = { benchmark, generateArray };
+function generateInverseArray(bits) {
+  let items = Math.floor(Math.pow(2, bits));
+  console.log({ items });
+  let arr = new Uint32Array(items--);
+  for (let i = 0; 0 < items; i++) {
+    arr[i] = items;
+    items--;
+  }
+  return arr;
+}
+
+module.exports = { benchmark, generateArray, generateInverseArray };
