@@ -12,12 +12,14 @@ function bubbleSort(arr) {
   return arr;
 }
 
+/// O(n^2)
 function selectionSort(arr) {
   for (let i = 0; i < arr.length - 1; i++) {
     let minIdx = i;
-    for (let j = i; j < arr.length - 1; j++) {
-      if (arr[i] < minIdx) {
-        minIdx = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      console.log(j, arr.length - 1);
+      if (arr[j] < arr[minIdx]) {
+        minIdx = j;
       }
     }
     [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
@@ -27,11 +29,11 @@ function selectionSort(arr) {
 
 // Test Data
 
-let arr = generateInverseArray(16);
+let arr = generateInverseArray(4);
 console.log(arr);
 
 // Tests/Benchmarks
-let resultBubbleSort = benchmark(bubbleSort, [arr]);
-let resultSelectionSort = benchmark(selectionSort, [arr]);
+let resultBubbleSort = benchmark(bubbleSort, [Array.from(arr)]);
+let resultSelectionSort = benchmark(selectionSort, [Array.from(arr)]);
 
 console.log({ resultBubbleSort, resultSelectionSort });
