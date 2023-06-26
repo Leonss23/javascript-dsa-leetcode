@@ -9,7 +9,6 @@ function benchmark(callback, args) {
 
 function generateArray(bits) {
   let items = Math.floor(Math.pow(2, bits));
-  console.log({ items });
   let arr = new Uint32Array(items);
   for (let i = 0; i < items; i++) {
     arr[i] = i;
@@ -19,7 +18,6 @@ function generateArray(bits) {
 
 function generateInverseArray(bits) {
   let items = Math.floor(Math.pow(2, bits));
-  console.log({ items });
   let arr = new Uint32Array(items--);
   for (let i = 0; 0 < items; i++) {
     arr[i] = items;
