@@ -131,7 +131,7 @@ function partition(arr, start, end) {
 
 // Test Data
 
-let arr = generateInverseArray(16);
+let arr = generateInverseArray(12);
 console.log(arr);
 
 // Tests/Benchmarks
