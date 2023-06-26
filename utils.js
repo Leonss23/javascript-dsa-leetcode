@@ -17,7 +17,7 @@ function generateArray(bits) {
 }
 
 function generateInverseArray(bits) {
-  let items = Math.floor(Math.pow(2, bits));
+  let items = Math.floor(2 ** bits);
   let arr = new Uint32Array(items--);
   for (let i = 0; 0 < items; i++) {
     arr[i] = items;
