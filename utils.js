@@ -1,9 +1,18 @@
+/**
+ *
+ * @param {Function} callback
+ * @param {Array} args
+ * @returns
+ */
 function benchmark(callback, args) {
-  let start = performance.now();
-  let returned = callback(...args);
-  let end = performance.now();
+  console.log(callback.name);
+  const start = performance.now();
+  const returned = callback(...args);
+  const end = performance.now();
 
-  console.log({ perf: end - start });
+  const diff = end - start;
+
+  console.log(diff, "ms");
   return returned;
 }
 
